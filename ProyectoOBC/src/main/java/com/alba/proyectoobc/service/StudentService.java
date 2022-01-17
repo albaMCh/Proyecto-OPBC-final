@@ -14,7 +14,7 @@ public interface StudentService {
 
     List<Student> findAll ();
 
-    List<Student> findByUsername(String username);
+    List<Student> findByName(String username);
 
     Student findById (Integer id);
 

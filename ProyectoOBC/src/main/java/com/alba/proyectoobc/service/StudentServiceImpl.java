@@ -62,7 +62,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public List<Student> findByUsername(String username){
+    public List<Student> findByName(String username){
 
         log.info("Buscando usuario por nombre: " + username);
         return studentRepository.findByUsernameContainingIgnoreCase(username);
