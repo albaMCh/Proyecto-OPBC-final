@@ -1,5 +1,6 @@
 package com.albamch.userservice.service;
 
+import com.albamch.userservice.DAO.UserRestoredPassword;
 import com.albamch.userservice.models.User;
 
 import java.util.List;
@@ -14,9 +15,9 @@ public interface UserService {
 
     User findById(Integer id);
 
-    User getPassword(String email);
+    UserRestoredPassword getPassword(String email);
 
-    User setPassword(Integer id, String password);
+    User setPassword(String email, String password);
 
     User enableUser(Integer id);
 

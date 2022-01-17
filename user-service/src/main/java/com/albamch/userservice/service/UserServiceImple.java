@@ -1,9 +1,12 @@
 package com.albamch.userservice.service;
 
+import com.albamch.userservice.DAO.UserRestoredPassword;
 import com.albamch.userservice.ExceptionHandler.CustomErrorResponse;
+import com.albamch.userservice.mapper.UserMapper;
 import com.albamch.userservice.models.User;
 import com.albamch.userservice.repository.UserRepository;
 import lombok.extern.log4j.Log4j2;
+import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,11 +19,13 @@ public class UserServiceImple implements UserService {
 
     private UserRepository userRepository;
     private BCryptPasswordEncoder cryptPasswordEncoder;
+    private UserMapper userMapper;
 
     @Autowired
     public UserServiceImple(UserRepository userRepository, BCryptPasswordEncoder cryptPasswordEncoder) {
         this.userRepository = userRepository;
         this.cryptPasswordEncoder = cryptPasswordEncoder;
+        this.userMapper = Mappers.getMapper(UserMapper.class);
     }
 
     @Override
@@ -50,20 +55,25 @@ public class UserServiceImple implements UserService {
     }
 
     @Override
-    public User getPassword(String email) {
+    public UserRestoredPassword getPassword(String email) {
 
         User user = findByEmail(email);
 
+        if(user != null){
 
+            log.info("Usuario recuperando contraseña");
+            return userMapper.userToUserRestoredPassword(user);
+        }
 
+        return null;
     }
 
     @Override
-    public User setPassword(Integer id, String password) {
+    public User setPassword(String email, String password) {
 
-        log.info("Estableciendo contraseña para usuario: " + id);
+        log.info("Estableciendo contraseña para usuario: " + email);
 
-        User users = findById(id);
+        User users = findByEmail(email);
 
         if (!password.equals("")) {
 

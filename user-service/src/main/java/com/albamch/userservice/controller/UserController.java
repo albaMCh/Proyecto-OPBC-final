@@ -1,5 +1,6 @@
 package com.albamch.userservice.controller;
 
+import com.albamch.userservice.DAO.UserRestoredPassword;
 import com.albamch.userservice.models.User;
 import com.albamch.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,11 +50,10 @@ public class UserController {
 
     //POST
 
-    @RequestMapping(value = "/pass", method = RequestMethod.POST)
-    public ResponseEntity<User> getPassword(@RequestParam(value = "id") String email) {
+    @RequestMapping(value = "/RestorePass", method = RequestMethod.POST)
+    public ResponseEntity<UserRestoredPassword> getPassword(@RequestParam(value = "email") String email) {
 
-        return null;
-        //return new ResponseEntity<>(userService.setPassword(id, pass), HttpStatus.OK);
+        return new ResponseEntity<>(userService.getPassword(email), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST)
@@ -68,10 +68,10 @@ public class UserController {
         return new ResponseEntity<>(userService.findByName(nombre), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/RestorePass", method = RequestMethod.POST)
-    public ResponseEntity<User> setPassword(@RequestParam(value = "id") Integer id,
+    @RequestMapping(value = "/SetPass", method = RequestMethod.POST)
+    public ResponseEntity<User> setPassword(@RequestParam(value = "email") String email,
                                              @RequestParam(value = "pass") String pass) {
-        return new ResponseEntity<>(userService.setPassword(id, pass), HttpStatus.OK);
+        return new ResponseEntity<>(userService.setPassword(email, pass), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/username", method = RequestMethod.POST)

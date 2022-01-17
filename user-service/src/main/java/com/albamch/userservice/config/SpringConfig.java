@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
-@ComponentScan("com.albamch.userservice.models")
+@ComponentScan({"com.albamch.userservice.models","com.albamch.userservice.mapper","com.albamch.userservice"})
 @EnableJpaRepositories("com.albamch.userservice.repository")
 @EnableEurekaClient
 public class SpringConfig {
