@@ -1,0 +1,21 @@
+server:
+  port:
+    8888
+  servlet:
+    context-path:
+      /configserver
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+            https://github.com/albaMCh/config-files.git
+          username:
+            albamolerachacon
+          password:
+            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
+
+  application:
+    name: config-server
