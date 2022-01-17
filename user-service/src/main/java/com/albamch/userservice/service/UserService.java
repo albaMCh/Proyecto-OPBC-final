@@ -14,6 +14,8 @@ public interface UserService {
 
     User findById(Integer id);
 
+    User getPassword(String email);
+
     User setPassword(Integer id, String password);
 
     User enableUser(Integer id);

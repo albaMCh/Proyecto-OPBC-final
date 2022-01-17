@@ -42,8 +42,20 @@ public class UserServiceImple implements UserService {
     @Override
     public User save(User user) {
 
-        log.info("guardando usuario con id: " + user.getId());
+        log.info("guardando usuario");
+
+        user.setPassword(cryptPasswordEncoder.encode(user.getPassword()));
+
         return userRepository.save(user);
+    }
+
+    @Override
+    public User getPassword(String email) {
+
+        User user = findByEmail(email);
+
+
+
     }
 
     @Override

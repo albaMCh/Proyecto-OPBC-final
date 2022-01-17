@@ -49,6 +49,13 @@ public class UserController {
 
     //POST
 
+    @RequestMapping(value = "/pass", method = RequestMethod.POST)
+    public ResponseEntity<User> getPassword(@RequestParam(value = "id") String email) {
+
+        return null;
+        //return new ResponseEntity<>(userService.setPassword(id, pass), HttpStatus.OK);
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<User> save(@RequestBody User users) {
 
@@ -61,7 +68,7 @@ public class UserController {
         return new ResponseEntity<>(userService.findByName(nombre), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/pass", method = RequestMethod.POST)
+    @RequestMapping(value = "/RestorePass", method = RequestMethod.POST)
     public ResponseEntity<User> setPassword(@RequestParam(value = "id") Integer id,
                                              @RequestParam(value = "pass") String pass) {
         return new ResponseEntity<>(userService.setPassword(id, pass), HttpStatus.OK);
