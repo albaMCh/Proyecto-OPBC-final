@@ -79,7 +79,12 @@
         <dependency>
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
-            <version>2.3.4.RELEASE</version>
+            <version>2.5.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.albamch</groupId>
+            <artifactId>jwt-commons</artifactId>
+            <version>0.0.1</version>
         </dependency>
 
     </dependencies>
