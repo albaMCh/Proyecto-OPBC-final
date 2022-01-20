@@ -8,3 +8,11 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888/configserver
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+
+server:
+  forward-headers-strategy: framework

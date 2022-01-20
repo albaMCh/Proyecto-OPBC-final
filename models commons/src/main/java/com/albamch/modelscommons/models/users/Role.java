@@ -1,4 +1,4 @@
-package com.albamch.userservice.models;
+package com.albamch.modelscommons.models.users;
 
 import lombok.Data;
 

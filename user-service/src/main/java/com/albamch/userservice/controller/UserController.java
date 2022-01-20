@@ -1,7 +1,7 @@
 package com.albamch.userservice.controller;
 
+import com.albamch.modelscommons.models.users.User;
 import com.albamch.userservice.DAO.UserRestoredPassword;
-import com.albamch.userservice.models.User;
 import com.albamch.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -70,7 +70,7 @@ public class UserController {
 
     @RequestMapping(value = "/SetPass", method = RequestMethod.POST)
     public ResponseEntity<User> setPassword(@RequestParam(value = "email") String email,
-                                             @RequestParam(value = "pass") String pass) {
+                                            @RequestParam(value = "pass") String pass) {
         return new ResponseEntity<>(userService.setPassword(email, pass), HttpStatus.OK);
     }
 

@@ -1,6 +1,6 @@
 package com.albamch.userservice.repository;
 
-import com.albamch.userservice.models.User;
+import com.albamch.modelscommons.models.users.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -68,9 +68,6 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findByMove(move), HttpStatus.OK);
     }
 
-
-
-
     /*@RequestMapping(value = "/enable-student/{id}", method = RequestMethod.GET)
     public ResponseEntity<Student> enableStudent(@PathVariable("id") Integer id) {
 
