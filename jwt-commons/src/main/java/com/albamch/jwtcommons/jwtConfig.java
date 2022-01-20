@@ -2,7 +2,7 @@ package com.albamch.jwtcommons;
 
 public class jwtConfig {
 
-    public static final String RSA_PRIVADA = "-----BEGIN RSA PRIVATE KEY-----                                                                                               \n" +
+    public static final String RSA_PRIVADA = "-----BEGIN RSA PRIVATE KEY-----\n" +
             "MIIEpAIBAAKCAQEAv+iIwtGo3283DruAaIECZ9M5Usn+B0ghAi60jItw0v5AUipQ\n" +
             "Xvp2ki81VBnfHPeVckzpvDDYfUaXIoW+T/RnGAG4hQ8bCiVuaDXFIVFs7PGiXTOW\n" +
             "X4MI1LaobWEJOlg+vx41xAGMDvnmUVWdCSFkyo7vugBxQuIgwUreoJzByIkbF7Em\n" +
@@ -28,11 +28,11 @@ public class jwtConfig {
             "bNadcr0CgYB6UEaqQ42r4R9BYVQUVdXg8/VlzbmTnmde25+XpGW0HmKEsAAPvr8u\n" +
             "FhMkWbF3j9anhlDeOMaGeNHvzRwZmx3oEsxa1SZeQeeva/PKSo0gwbtN6V5amTpT\n" +
             "2A7MqsztuvPrVO6ehy3RNRQmHp9zzXHgey9frCbdNj26sY+6RmMCeA==\n" +
-            "-----END RSA PRIVATE KEY----- ";
+            "-----END RSA PRIVATE KEY-----";
 
     public static final String RSA_PUBLICA = "-----BEGIN PUBLIC KEY-----\n" +
             "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv+iIwtGo3283DruAaIEC\n" +
-            "Z9M5Usn+B0ghAi60jItw0v5AUipQXvp2ki81VBnfHPeVckzpvDDYfUaXIoW+T/Rn‹\n" +
+            "Z9M5Usn+B0ghAi60jItw0v5AUipQXvp2ki81VBnfHPeVckzpvDDYfUaXIoW+T/Rn\n" +
             "GAG4hQ8bCiVuaDXFIVFs7PGiXTOWX4MI1LaobWEJOlg+vx41xAGMDvnmUVWdCSFk\n" +
             "yo7vugBxQuIgwUreoJzByIkbF7EmB3ya43V6gBxOP2oxbRFABWBB50x/YXU85fz7\n" +
             "WdQWBMVQb4fDsx9aoxBVMwYpFtKkMkh6r5zZEtKoUOjCLh4vg6BdDrB/O2a0VgBo\n" +

@@ -77,16 +77,34 @@
             <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-            <version>2.5.1.RELEASE</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <version>2.2.5.RELEASE</version>
         </dependency>
+
+        <!-- Commons -->
+
         <dependency>
             <groupId>com.albamch</groupId>
             <artifactId>jwt-commons</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.albamch</groupId>
+            <artifactId>models-commons</artifactId>
+            <version>0.0.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

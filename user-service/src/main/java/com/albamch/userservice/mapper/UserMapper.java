@@ -1,7 +1,7 @@
 package com.albamch.userservice.mapper;
 
+import com.albamch.modelscommons.models.users.User;
 import com.albamch.userservice.DAO.UserRestoredPassword;
-import com.albamch.userservice.models.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
