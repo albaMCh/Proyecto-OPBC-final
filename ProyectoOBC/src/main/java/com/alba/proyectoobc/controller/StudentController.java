@@ -56,6 +56,17 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findByPhone_number(phoneNumber), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/presence/{presence}", method = RequestMethod.GET)
+    public ResponseEntity<List<Student>> findByPresence(@PathVariable ("presence") String presence){
+
+        return new ResponseEntity<>(studentService.findByPresence(presence), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/move/{move}", method = RequestMethod.GET)
+    public ResponseEntity<List<Student>> findByMove(@PathVariable ("move") Boolean move){
+
+        return new ResponseEntity<>(studentService.findByMove(move), HttpStatus.OK);
+    }
 
     /*@RequestMapping(value = "/enable-student/{id}", method = RequestMethod.GET)
     public ResponseEntity<Student> enableStudent(@PathVariable("id") Integer id) {
@@ -80,6 +91,14 @@ public class StudentController {
     public ResponseEntity<List<Student>> findByName(@RequestParam(value = "nombre") String nombre) {
 
         return new ResponseEntity<>(studentService.findByName(nombre), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/3in1}", method = RequestMethod.POST)
+    public ResponseEntity<List<Student>> findByCityAndPresenceAndMove (@RequestParam ("presence") String presence,
+                                                                       @RequestParam ("city") String city,
+                                                                       @RequestParam ("move") Boolean move ){
+
+        return new ResponseEntity<>(studentService.findByCityAndPresenceAndMove(city, presence, move), HttpStatus.OK);
     }
 
     //DELETE
