@@ -1,6 +1,6 @@
 package com.albamch.userservice.controller;
 
-import com.albamch.userservice.models.Role;
+import com.albamch.modelscommons.models.users.Role;
 import com.albamch.userservice.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

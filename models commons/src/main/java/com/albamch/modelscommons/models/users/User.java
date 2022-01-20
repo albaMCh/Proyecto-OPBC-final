@@ -1,4 +1,4 @@
-package com.albamch.userservice.models;
+package com.albamch.modelscommons.models.users;
 
 import lombok.Data;
 
@@ -13,6 +13,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
+    @Column(length = 75, nullable = false)
+    private String name;
+
+    @Column(length = 75, nullable = false)
+    private String lastname;
 
     @Column(length = 55)
     private String username;

@@ -56,12 +56,6 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findByPhone_number(phoneNumber), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/pre/{city}", method = RequestMethod.GET)
-    public ResponseEntity<List<Student>> findByCity(@PathVariable ("city") String city){
-
-        return new ResponseEntity<>(studentService.findByCity(city), HttpStatus.OK);
-    }
-
 
     /*@RequestMapping(value = "/enable-student/{id}", method = RequestMethod.GET)
     public ResponseEntity<Student> enableStudent(@PathVariable("id") Integer id) {

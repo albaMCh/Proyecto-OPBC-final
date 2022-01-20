@@ -1,7 +1,7 @@
 package com.albamch.userservice.mapper;
 
+import com.albamch.modelscommons.models.users.User;
 import com.albamch.userservice.DAO.UserRestoredPassword;
-import com.albamch.userservice.models.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;

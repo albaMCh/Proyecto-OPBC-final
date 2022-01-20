@@ -1,6 +1,6 @@
 package com.albamch.userservice.service;
 
-import com.albamch.userservice.models.Role;
+import com.albamch.modelscommons.models.users.Role;
 import com.albamch.userservice.repository.RoleRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
