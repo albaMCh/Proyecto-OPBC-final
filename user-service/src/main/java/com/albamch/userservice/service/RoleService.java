@@ -1,6 +1,6 @@
 package com.albamch.userservice.service;
 
-import com.albamch.userservice.models.Role;
+import com.albamch.modelscommons.models.users.Role;
 
 import java.util.List;
 

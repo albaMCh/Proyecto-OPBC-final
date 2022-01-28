@@ -83,6 +83,19 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.albamch</groupId>
+            <artifactId>models-commons</artifactId>
+            <version>0.0.3</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

@@ -1,9 +1,9 @@
 package com.albamch.userservice.service;
 
+import com.albamch.modelscommons.models.users.User;
 import com.albamch.userservice.DAO.UserRestoredPassword;
 import com.albamch.userservice.ExceptionHandler.CustomErrorResponse;
 import com.albamch.userservice.mapper.UserMapper;
-import com.albamch.userservice.models.User;
 import com.albamch.userservice.repository.UserRepository;
 import lombok.extern.log4j.Log4j2;
 import org.mapstruct.factory.Mappers;
