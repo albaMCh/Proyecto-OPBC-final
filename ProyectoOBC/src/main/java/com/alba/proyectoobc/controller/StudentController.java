@@ -93,6 +93,7 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findByName(nombre), HttpStatus.OK);
     }
 
+
     @RequestMapping(value = "/3in1", method = RequestMethod.POST)
     public ResponseEntity<List<Student>> findByCityAndPresenceAndMove (@RequestParam ("presence") String presence,
                                                                        @RequestParam ("city") String city,
