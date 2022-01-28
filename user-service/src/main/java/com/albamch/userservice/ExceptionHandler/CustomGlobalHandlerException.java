@@ -16,6 +16,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 
 @Log4j2
@@ -50,6 +51,19 @@ public class CustomGlobalHandlerException extends ResponseEntityExceptionHandler
 
 		ApiError error = new ApiError(HttpStatus.BAD_REQUEST);
 		error.setMensaje("No existe id");
+		error.setExceptionMessage(ex.getMessage());
+
+		log.error(ex.getMessage());
+		log.error(ex.getLocalizedMessage());
+
+		return buildResponseEntity(error);
+	}
+
+	@ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+	public ResponseEntity<Object> integrityConstrainsViolation (SQLIntegrityConstraintViolationException ex){
+
+		ApiError error = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR);
+		error.setMensaje("Error SQL");
 		error.setExceptionMessage(ex.getMessage());
 
 		log.error(ex.getMessage());

@@ -12,6 +12,10 @@ public interface RoleService{
 
     Role save(Role roles);
 
+    Role enableRole(Integer id);
+
+    Role disableRole (Integer id);
+
     List<Role> findByName(String nombre);
 
     Role findById(Integer id);

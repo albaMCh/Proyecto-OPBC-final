@@ -1,6 +1,5 @@
 package com.albamch.authorizationserver.config.security;
 
-import com.albamch.jwtcommons.jwtConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +18,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import java.util.Arrays;
+import java.util.Base64;
 
 @Configuration
 @EnableAuthorizationServer
@@ -53,7 +53,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
         clients
                 .inMemory()
-                .withClient("config.security.oauth2.client.id")
+                .withClient(env.getProperty("config.security.oauth2.client.id"))
                 .secret(passwordEncoder.encode(env.getProperty("config.security.oauth2.client.secret")))
                 .scopes("read","write")
                 .authorizedGrantTypes("password", "refresh_token")
@@ -81,13 +81,20 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         return new JwtTokenStore(accessTokenConverter());
     }
 
-    @Bean
+    /*@Bean
     public JwtAccessTokenConverter accessTokenConverter (){
 
         JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
         tokenConverter.setSigningKey(jwtConfig.RSA_PRIVADA);
         tokenConverter.setVerifierKey(jwtConfig.RSA_PUBLICA);
 
+        return tokenConverter;
+    }*/
+
+    @Bean
+    public JwtAccessTokenConverter accessTokenConverter() {
+        JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
+        tokenConverter.setSigningKey(Base64.getEncoder().encodeToString(env.getProperty("config.security.oauth2.jwt.key").getBytes()));
         return tokenConverter;
     }
 }

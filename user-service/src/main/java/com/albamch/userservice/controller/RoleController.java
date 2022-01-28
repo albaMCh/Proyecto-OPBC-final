@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users/role")
+@RequestMapping("/role")
 public class RoleController {
 
     private RoleService roleService;
@@ -40,6 +40,33 @@ public class RoleController {
 
         return new ResponseEntity<>(roleService.findByName(nombre), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/enable/{id}", method = RequestMethod.GET)
+    public ResponseEntity<HashMap<String, String>> enableRole (@PathVariable ("id") Integer id){
+
+        HashMap<String, String> response = new HashMap<>();
+
+        Role role = roleService.enableRole(id);
+
+        response.put("Role: ", role.getName());
+        response.put("Mensaje: ", "Esta activado");
+
+        return ResponseEntity.ok(response);
+    }
+
+    @RequestMapping(value = "/disable/{id}", method = RequestMethod.GET)
+    public ResponseEntity<HashMap<String, String>> disableRole (@PathVariable ("id") Integer id){
+
+        HashMap<String, String> response = new HashMap<>();
+
+        Role role = roleService.disableRole(id);
+
+        response.put("Role: ", role.getName());
+        response.put("Mensaje: ", "Esta desactivado");
+
+        return ResponseEntity.ok(response);
+    }
+
 
     //POST
 

@@ -46,6 +46,20 @@ public class RoleServiceImple implements RoleService{
     }
 
     @Override
+    public Role enableRole(Integer id) {
+
+        log.info("Activando rol: " + id);
+        return roleRepository.setEnableRole(id);
+    }
+
+    @Override
+    public Role disableRole(Integer id) {
+
+        log.info("Desactivando rol: " + id);
+        return roleRepository.setDisableRole(id);
+    }
+
+    @Override
     public Role findById(Integer id) {
 
         log.info("buscando por id: " + id);

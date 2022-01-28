@@ -27,7 +27,7 @@ import java.util.Arrays;
 @Configuration
 @EnableEurekaClient
 @ComponentScan({"com.albamch.zuulserver","com.albamch.modelscommons"})
-@EnableZuulServer
+@EnableZuulProxy
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 

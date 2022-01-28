@@ -15,6 +15,6 @@ spring:
           username:
             albamolerachacon
           password:
-            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
+            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
   application:
     name: config-server
