@@ -15,7 +15,8 @@ import java.util.List;
 
 @Log4j2
 @Service
-public class UserServiceImple implements UserService {
+public class
+UserServiceImple implements UserService {
 
     private UserRepository userRepository;
     private BCryptPasswordEncoder cryptPasswordEncoder;
@@ -144,6 +145,8 @@ public class UserServiceImple implements UserService {
 
     @Override
     public User findByUsername(String username) {
+
+        log.info("buscando role por usuario: " + username);
         return userRepository.findByUsernameIgnoreCase(username);
     }
 

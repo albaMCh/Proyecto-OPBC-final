@@ -86,7 +86,7 @@
         <dependency>
             <groupId>com.albamch</groupId>
             <artifactId>models-commons</artifactId>
-            <version>0.0.3</version>
+            <version>0.0.4</version>
             <scope>compile</scope>
             <exclusions>
                 <exclusion>

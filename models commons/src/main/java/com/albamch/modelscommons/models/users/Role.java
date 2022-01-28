@@ -1,5 +1,6 @@
 package com.albamch.modelscommons.models.users;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,6 +18,10 @@ public class Role {
     @Column(unique = true)
     private String name;
 
+    @Column
+    private Boolean enable = false;
+
+    @JsonIgnore
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private List<User> users;
 

@@ -45,6 +45,8 @@ public class UserService implements UserDetailsService, IUserService {
                     .map(roles -> new SimpleGrantedAuthority(roles.getName()))
                     .peek(authority -> log.info("Role: " + authority))
                     .collect(Collectors.toList());
+
+            return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getEnable(), true, true, true, authorities);
         }
 
         catch (FeignException e) {
