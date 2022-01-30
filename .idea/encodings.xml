@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/1_springboot-servicio[gateway-server]/springboot-servicio-gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProyectoOBC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProyectoOBC/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authorization-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authorization-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jwt-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jwt-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/models commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/models commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul-server/src/main/java" charset="UTF-8" />

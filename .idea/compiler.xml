@@ -2,25 +2,41 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zuul-server" />
-        <module name="ficheros_opbc" />
-        <module name="admin-server" />
+        <module name="spring-gateway" />
+        <module name="springboot-servicio-oauth" />
         <module name="ProyectoOBC" />
         <module name="user-service" />
         <module name="Config-Server" />
         <module name="eureka-server" />
+        <module name="zuul-server" />
+        <module name="jwt-commons" />
+        <module name="springboot-servicio-gateway-server (1)" />
+        <module name="authorization-server" />
+        <module name="ficheros_opbc" />
+        <module name="springboot-servicio-gateway-server" />
+        <module name="models-commons" />
+        <module name="admin-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-server" target="17" />
+      <module name="authorization-server" target="17" />
       <module name="Config-Server" target="17" />
       <module name="eureka-server" target="17" />
       <module name="ficheros_opbc" target="11" />
+      <module name="jpa-commons" target="17" />
+      <module name="jwt-commons" target="17" />
+      <module name="models-commons" target="17" />
       <module name="ProyectoOBC" target="17" />
+      <module name="spring-gateway" target="17" />
+      <module name="springboot-servicio-gateway-server" target="11" />
+      <module name="springboot-servicio-gateway-server (1)" target="11" />
+      <module name="springboot-servicio-oauth" target="11" />
       <module name="user-service" target="17" />
       <module name="zuul-server" target="17" />
     </bytecodeTargetLevel>
@@ -30,7 +46,15 @@
       <module name="Config-Server" options="-parameters" />
       <module name="ProyectoOBC" options="-parameters" />
       <module name="admin-server" options="-parameters" />
+      <module name="authorization-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="jpa-commons" options="-parameters" />
+      <module name="jwt-commons" options="-parameters" />
+      <module name="models-commons" options="-parameters" />
+      <module name="spring-gateway" options="-parameters" />
+      <module name="springboot-servicio-gateway-server" options="-parameters" />
+      <module name="springboot-servicio-gateway-server (1)" options="-parameters" />
+      <module name="springboot-servicio-oauth" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
     </option>

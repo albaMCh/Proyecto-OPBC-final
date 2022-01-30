@@ -13,7 +13,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
 
         http
-                .authorizeHttpRequests()
+                .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/oauth/**").permitAll();
     }

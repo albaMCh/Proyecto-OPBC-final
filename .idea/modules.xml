@@ -5,8 +5,15 @@
       <module fileurl="file://$PROJECT_DIR$/config server/Config-Server.iml" filepath="$PROJECT_DIR$/config server/Config-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProyectoOBC/ProyectoOBC.iml" filepath="$PROJECT_DIR$/ProyectoOBC/ProyectoOBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/admin-server/admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authorization-server/authorization-server.iml" filepath="$PROJECT_DIR$/authorization-server/authorization-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ficheros_opbc/ficheros_opbc.iml" filepath="$PROJECT_DIR$/ficheros_opbc/ficheros_opbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jwt-commons/jwt-commons.iml" filepath="$PROJECT_DIR$/jwt-commons/jwt-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/models commons/models-commons.iml" filepath="$PROJECT_DIR$/models commons/models-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-gateway/spring-gateway.iml" filepath="$PROJECT_DIR$/spring-gateway/spring-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_springboot-servicio[gateway-server]/springboot-servicio-gateway-server/springboot-servicio-gateway-server.iml" filepath="$PROJECT_DIR$/1_springboot-servicio[gateway-server]/springboot-servicio-gateway-server/springboot-servicio-gateway-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/springboot-servicio-gateway-server (1).iml" filepath="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/springboot-servicio-gateway-server (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/springboot-servicio-oauth.iml" filepath="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/springboot-servicio-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
     </modules>

@@ -12,10 +12,10 @@ public interface UserFeignClient {
 
     //GET
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/user/{id}")
     User findById (@PathVariable("id") Integer id);
 
-    @PostMapping("/users/username")
+    @PostMapping("/user/username")
     User findByUsername (@RequestParam("username") String username);
 
 }
