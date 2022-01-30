@@ -7,20 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jwt-commons" />
+        <module name="zuul-server" />
+        <module name="authorization-server" />
+        <module name="ficheros_opbc" />
+        <module name="models-commons" />
         <module name="spring-gateway" />
-        <module name="springboot-servicio-oauth" />
+        <module name="admin-server" />
         <module name="ProyectoOBC" />
         <module name="user-service" />
         <module name="Config-Server" />
         <module name="eureka-server" />
-        <module name="zuul-server" />
-        <module name="jwt-commons" />
-        <module name="springboot-servicio-gateway-server (1)" />
-        <module name="authorization-server" />
-        <module name="ficheros_opbc" />
-        <module name="springboot-servicio-gateway-server" />
-        <module name="models-commons" />
-        <module name="admin-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

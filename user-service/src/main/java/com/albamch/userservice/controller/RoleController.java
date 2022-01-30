@@ -76,6 +76,11 @@ public class RoleController {
         return new ResponseEntity<>(roleService.save(roles), HttpStatus.OK);
     }
 
+    public ResponseEntity<Object> assignRoleToUser (){
+
+        return null;
+    }
+
     //PUT
 
     @RequestMapping(method = RequestMethod.PUT)
