@@ -12,4 +12,10 @@ public class CustomErrorResponse extends RuntimeException{
         super("Class name: " + cla.getSimpleName() + ", " + message);
         this.ex_message = ex_message;
     }
+
+    public CustomErrorResponse(Class cla, String message, String ex_message, Throwable throwable){
+
+        super("Class name: " + cla.getSimpleName() + ", " + message, throwable);
+        this.ex_message = ex_message;
+    }
 }
