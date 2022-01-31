@@ -9,7 +9,6 @@
         <option value="$PROJECT_DIR$/ficheros_opbc/pom.xml" />
         <option value="$PROJECT_DIR$/ProyectoOBC/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul-server/pom.xml" />
         <option value="$PROJECT_DIR$/jwt-commons/pom.xml" />
         <option value="$PROJECT_DIR$/models commons/pom.xml" />
         <option value="$PROJECT_DIR$/authorization-server/pom.xml" />
@@ -17,6 +16,7 @@
         <option value="$PROJECT_DIR$/spring-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/pom.xml" />
         <option value="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/pom.xml" />
+        <option value="$PROJECT_DIR$/file-service/pom.xml" />
       </list>
     </option>
   </component>

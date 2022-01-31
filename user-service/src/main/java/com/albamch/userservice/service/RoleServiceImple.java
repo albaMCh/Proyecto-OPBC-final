@@ -60,6 +60,20 @@ public class RoleServiceImple implements RoleService{
     }
 
     @Override
+    public boolean assignUserToRole(Integer userId, String roleName) {
+
+        log.info("Asignando rol " + roleName + " a usuario: " + userId);
+        return roleRepository.assignUserToRole(userId, findByName(roleName).get(0).getId());
+    }
+
+    @Override
+    public boolean unAssignUserToRole(Integer userId, String roleName) {
+
+        log.info("Desasignando rol " + roleName + " a usuario: " + userId);
+        return roleRepository.unAssignUserToRole(userId, findByName(roleName).get(0).getId());
+    }
+
+    @Override
     public Role findById(Integer id) {
 
         log.info("buscando por id: " + id);

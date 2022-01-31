@@ -14,7 +14,11 @@ public interface RoleService{
 
     Role enableRole(Integer id);
 
-    Role disableRole (Integer id);
+    Role disableRole(Integer id);
+
+    boolean assignUserToRole(Integer id, String roleName);
+
+    boolean unAssignUserToRole(Integer id, String roleName);
 
     List<Role> findByName(String nombre);
 

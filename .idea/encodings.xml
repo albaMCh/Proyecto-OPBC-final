@@ -16,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/config server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jwt-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jwt-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/models commons/src/main/java" charset="UTF-8" />
@@ -23,7 +24,5 @@
     <file url="file://$PROJECT_DIR$/spring-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/zuul-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/zuul-server/src/main/resources" charset="UTF-8" />
   </component>
 </project>

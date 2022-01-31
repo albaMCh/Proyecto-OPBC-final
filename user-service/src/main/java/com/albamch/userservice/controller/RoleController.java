@@ -76,9 +76,40 @@ public class RoleController {
         return new ResponseEntity<>(roleService.save(roles), HttpStatus.OK);
     }
 
-    public ResponseEntity<Object> assignRoleToUser (){
+    @RequestMapping(value = "/assign", method = RequestMethod.POST)
+    public ResponseEntity<Object> assignRoleToUser (@RequestParam("user") Integer userId, @RequestParam("role") String roleName){
 
-        return null;
+        HashMap<String, String> response = new HashMap<>();
+
+        if(roleService.assignUserToRole(userId, roleName)){
+
+            response.put("Asignado role a usuario", roleService.findById(userId).toString());
+            response.put("Role ", roleName);
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+
+        response.put("No se ha asignado el role a", userId.toString());
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @RequestMapping(value = "/unassign", method = RequestMethod.POST)
+    public ResponseEntity<Object> unAssignRoleToUser (@RequestParam("user") Integer userId, @RequestParam("role") String roleName){
+
+        HashMap<String, String> response = new HashMap<>();
+
+        if(roleService.unAssignUserToRole(userId, roleName)){
+
+            response.put("Desasignado role a usuario", roleService.findById(userId).toString());
+            response.put("Role ", roleName);
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+
+        response.put("No se ha asignado el role a", userId.toString());
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 
     //PUT

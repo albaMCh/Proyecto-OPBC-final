@@ -21,4 +21,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     @Query(value = "UPDATE user SET user.enable = 0 WHERE user.id = ?1", nativeQuery = true)
     User setDisableUser (Integer userId);
+
 }

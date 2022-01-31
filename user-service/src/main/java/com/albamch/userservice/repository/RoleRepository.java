@@ -19,6 +19,9 @@ public interface RoleRepository extends JpaRepository<Role,Integer> {
     @Query(value = "UPDATE role SET role.enable = 0 WHERE role.id = ?1", nativeQuery = true)
     Role setDisableRole (Integer roleId);
 
-    /*@Query(value = "INSERT INTO users_to_roles ", nativeQuery = true)
-    boolean assignUserToRole (Integer userId, Integer roleId);*/
+    @Query(value = "INSERT INTO users_to_roles VALUES (?1,?2) ", nativeQuery = true)
+    boolean assignUserToRole (Integer userId, Integer roleId);
+
+    @Query(value = "DELETE FROM users_to_roles WHERE users_id = ?1 and roles_id = ?2", nativeQuery = true)
+    boolean unAssignUserToRole (Integer userId, Integer roleId);
 }
