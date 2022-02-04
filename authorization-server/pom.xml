@@ -108,8 +108,8 @@
 
         <dependency>
             <groupId>com.albamch</groupId>
-            <artifactId>models-commons</artifactId>
-            <version>0.0.4</version>
+            <artifactId>model-commons</artifactId>
+            <version>0.0.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>

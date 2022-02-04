@@ -1,7 +1,7 @@
 package com.albamch.authorizationserver.service;
 
 import com.albamch.authorizationserver.client.UserFeignClient;
-import com.albamch.modelscommons.models.users.User;
+import com.albamch.modelcommons.models.users.User;
 import feign.FeignException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -6,13 +6,18 @@
       <module fileurl="file://$PROJECT_DIR$/ProyectoOBC/ProyectoOBC.iml" filepath="$PROJECT_DIR$/ProyectoOBC/ProyectoOBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/admin-server/admin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/authorization-server/authorization-server.iml" filepath="$PROJECT_DIR$/authorization-server/authorization-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-commons/errors/errors.iml" filepath="$PROJECT_DIR$/lib-commons/errors/errors.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ficheros_opbc/ficheros_opbc.iml" filepath="$PROJECT_DIR$/ficheros_opbc/ficheros_opbc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/file-service/file-service.iml" filepath="$PROJECT_DIR$/file-service/file-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/files-service/files-service.iml" filepath="$PROJECT_DIR$/files-service/files-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-commons/jpa-commons/jpa-commons.iml" filepath="$PROJECT_DIR$/lib-commons/jpa-commons/jpa-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/jwt-commons/jwt-commons.iml" filepath="$PROJECT_DIR$/jwt-commons/jwt-commons.iml" />
-      <module fileurl="file://$PROJECT_DIR$/models commons/models-commons.iml" filepath="$PROJECT_DIR$/models commons/models-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-commons/lib-commons.iml" filepath="$PROJECT_DIR$/lib-commons/lib-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-commons/model-commons/model-commons.iml" filepath="$PROJECT_DIR$/lib-commons/model-commons/model-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-lib/models-commons/models-commons.iml" filepath="$PROJECT_DIR$/commons-lib/models-commons/models-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-gateway/spring-gateway.iml" filepath="$PROJECT_DIR$/spring-gateway/spring-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/students-service/students-service.iml" filepath="$PROJECT_DIR$/students-service/students-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/users-service/user-service.iml" filepath="$PROJECT_DIR$/users-service/user-service.iml" />
     </modules>
   </component>
 </project>

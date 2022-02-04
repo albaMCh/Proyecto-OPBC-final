@@ -17,7 +17,21 @@
         <option value="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-gateway-server/pom.xml" />
         <option value="$PROJECT_DIR$/1_springboot-servicio[spring_cloud_gateway_security_jwt]/springboot-servicio-oauth/pom.xml" />
         <option value="$PROJECT_DIR$/file-service/pom.xml" />
+        <option value="$PROJECT_DIR$/commons-lib/pom.xml" />
+        <option value="$PROJECT_DIR$/commons-lib/models-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/lib-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/lib-commons/model-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/lib-commons/jpa-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/lib-commons/errors/pom.xml" />
+        <option value="$PROJECT_DIR$/students-service/pom.xml" />
+        <option value="$PROJECT_DIR$/users-service/pom.xml" />
+        <option value="$PROJECT_DIR$/files-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/commons-lib/models-commons/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">

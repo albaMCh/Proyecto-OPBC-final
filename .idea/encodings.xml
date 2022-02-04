@@ -12,17 +12,23 @@
     <file url="file://$PROJECT_DIR$/admin-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authorization-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authorization-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons-lib/models commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons-lib/models commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/file-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/files-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/files-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jwt-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jwt-commons/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/models commons/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/models commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib-commons/errors/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib-commons/jpa-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib-commons/model-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/models-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/students-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/users-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/users-service/src/main/resources" charset="UTF-8" />
   </component>
 </project>

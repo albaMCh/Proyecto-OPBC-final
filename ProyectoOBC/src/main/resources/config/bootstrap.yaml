@@ -3,7 +3,7 @@ spring:
     name: proyectoobc
 
   profiles:
-    active: local
+    active: alt
 
   cloud:
     config:

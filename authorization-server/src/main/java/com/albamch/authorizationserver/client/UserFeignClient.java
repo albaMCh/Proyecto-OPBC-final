@@ -1,6 +1,6 @@
 package com.albamch.authorizationserver.client;
 
-import com.albamch.modelscommons.models.users.User;
+import com.albamch.modelcommons.models.users.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

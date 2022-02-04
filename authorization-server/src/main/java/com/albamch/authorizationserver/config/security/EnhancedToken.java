@@ -1,7 +1,7 @@
 package com.albamch.authorizationserver.config.security;
 
 import com.albamch.authorizationserver.service.IUserService;
-import com.albamch.modelscommons.models.users.User;
+import com.albamch.modelcommons.models.users.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

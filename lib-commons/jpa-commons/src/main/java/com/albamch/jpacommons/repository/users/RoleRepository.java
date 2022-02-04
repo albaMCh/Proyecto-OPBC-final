@@ -1,0 +1,26 @@
+package com.albamch.jpacommons.repository.users;
+
+import com.albamch.modelcommons.models.users.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface RoleRepository extends JpaRepository<Role,Integer> {
+
+    List<Role> findByNameContainingIgnoreCase(String nombre);
+
+    @Query(value = "UPDATE role SET role.enable = 1 WHERE role.id = ?1", nativeQuery = true)
+    Role setEnableRole (Integer roleId);
+
+    @Query(value = "UPDATE role SET role.enable = 0 WHERE role.id = ?1", nativeQuery = true)
+    Role setDisableRole (Integer roleId);
+
+    @Query(value = "INSERT INTO users_to_roles VALUES (?1,?2) ", nativeQuery = true)
+    boolean assignUserToRole (Integer userId, Integer roleId);
+
+    @Query(value = "DELETE FROM users_to_roles WHERE users_id = ?1 and roles_id = ?2", nativeQuery = true)
+    boolean unAssignUserToRole (Integer userId, Integer roleId);
+}
