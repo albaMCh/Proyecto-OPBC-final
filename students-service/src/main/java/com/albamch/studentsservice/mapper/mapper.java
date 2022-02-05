@@ -10,7 +10,8 @@ public class mapper {
         User user = new User();
         user.setEmail(student.getEmail());
         user.setEnable(false);
-        user.set
+
+        return null;
 
     }
 }

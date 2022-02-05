@@ -1,8 +1,8 @@
 package com.albamch.userservice.service;
 
 import com.albamch.errors.Exceptions.CustomErrorResponse;
+import com.albamch.jpacommons.repository.users.RoleRepository;
 import com.albamch.modelcommons.models.users.Role;
-import com.albamch.userservice.repository.RoleRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
