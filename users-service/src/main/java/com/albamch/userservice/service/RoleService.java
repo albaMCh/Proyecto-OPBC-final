@@ -16,11 +16,11 @@ public interface RoleService{
 
     Role disableRole(Integer id);
 
-    boolean assignUserToRole(Integer id, String roleName);
+    void assignUserToRole(Integer id, String roleName);
 
-    boolean unAssignUserToRole(Integer id, String roleName);
+    void unAssignUserToRole(Integer id, String roleName);
 
-    List<Role> findByName(String nombre);
+    Role findByName(String nombre);
 
     Role findById(Integer id);
 

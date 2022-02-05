@@ -1,6 +1,11 @@
 package com.albamch.modelcommons.models.students;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +19,12 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import java.util.List;
+import java.util.Objects;
 
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 @Table(name = "student")
 public class Student {
@@ -57,13 +66,11 @@ public class Student {
     @Column(length = 55)
     private String username;
 
-    @Column
-    private String password;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "students_to_tags", joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"),
             uniqueConstraints = {@UniqueConstraint(columnNames = {"student_id","tag_id"})})
+    @ToString.Exclude
     private List<Tag> tags;
 
     //Setters and Getters
@@ -84,5 +91,18 @@ public class Student {
             tag.removeStudent(this);
             this.tags.remove(tag);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Student student = (Student) o;
+        return id != null && Objects.equals(id, student.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }

@@ -1,10 +1,10 @@
 package com.albamch.userservice.service;
 
 import com.albamch.errors.Exceptions.CustomErrorResponse;
-import com.albamch.jpacommons.repository.users.UserRepository;
 import com.albamch.modelcommons.models.users.User;
 import com.albamch.userservice.DAO.UserRestoredPassword;
 import com.albamch.userservice.mapper.UserMapper;
+import com.albamch.userservice.repository.UserRepository;
 import lombok.extern.log4j.Log4j2;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -132,8 +132,8 @@ UserServiceImple implements UserService {
     @Override
     public List<User> findByName(String nombre) {
 
-        log.info("buscando role por usuario: " + nombre);
-        return userRepository.findByUsernameContainingIgnoreCase(nombre);
+        log.info("buscando por usuario: " + nombre);
+        return userRepository.findByNameContainingIgnoreCase(nombre);
     }
 
     @Override
@@ -146,7 +146,7 @@ UserServiceImple implements UserService {
     @Override
     public User findByUsername(String username) {
 
-        log.info("buscando role por usuario: " + username);
+        log.info("buscando usuario: " + username);
         return userRepository.findByUsernameIgnoreCase(username);
     }
 

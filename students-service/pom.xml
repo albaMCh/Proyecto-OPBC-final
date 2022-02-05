@@ -82,6 +82,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
 
         <!--Commons libs-->
 
@@ -100,7 +104,7 @@
         <dependency>
             <groupId>com.albamch</groupId>
             <artifactId>jpa-commons</artifactId>
-            <version>0.0.2</version>
+            <version>0.0.6</version>
             <scope>compile</scope>
             <exclusions>
                 <exclusion>

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.albamch</groupId>
     <artifactId>jpa-commons</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.6</version>
     <name>jpa-commons</name>
     <description>jpa-commons</description>
     <properties>

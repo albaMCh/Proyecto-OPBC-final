@@ -102,7 +102,7 @@
         <dependency>
             <groupId>com.albamch</groupId>
             <artifactId>jpa-commons</artifactId>
-            <version>0.0.2</version>
+            <version>0.0.6</version>
             <scope>compile</scope>
             <exclusions>
                 <exclusion>

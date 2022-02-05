@@ -35,8 +35,8 @@ public class RoleController {
         return new ResponseEntity<>(roleService.findById(id), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/name", method = RequestMethod.GET)
-    public ResponseEntity<List<Role>> findByName(@RequestParam("nombre") String nombre){
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+    public ResponseEntity<Role> findByName(@PathVariable("name") String nombre){
 
         return new ResponseEntity<>(roleService.findByName(nombre), HttpStatus.OK);
     }
@@ -81,17 +81,12 @@ public class RoleController {
 
         HashMap<String, String> response = new HashMap<>();
 
-        if(roleService.assignUserToRole(userId, roleName)){
+        roleService.assignUserToRole(userId, roleName);
 
-            response.put("Asignado role a usuario", roleService.findById(userId).toString());
-            response.put("Role ", roleName);
+        response.put("Asignado role a usuario", userId.toString());
+        response.put("Role ", roleName);
 
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-
-        response.put("No se ha asignado el role a", userId.toString());
-
-        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/unassign", method = RequestMethod.POST)
@@ -99,17 +94,12 @@ public class RoleController {
 
         HashMap<String, String> response = new HashMap<>();
 
-        if(roleService.unAssignUserToRole(userId, roleName)){
+        roleService.unAssignUserToRole(userId, roleName);
 
-            response.put("Desasignado role a usuario", roleService.findById(userId).toString());
-            response.put("Role ", roleName);
+        response.put("Desasignado role a usuario", userId.toString());
+        response.put("Role ", roleName);
 
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-
-        response.put("No se ha asignado el role a", userId.toString());
-
-        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     //PUT

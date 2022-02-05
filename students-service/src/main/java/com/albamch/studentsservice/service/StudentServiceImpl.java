@@ -3,6 +3,8 @@ package com.albamch.studentsservice.service;
 import com.albamch.errors.Exceptions.CustomErrorResponse;
 import com.albamch.jpacommons.repository.students.StudentRepository;
 import com.albamch.modelcommons.models.students.Student;
+import com.albamch.modelcommons.models.users.User;
+import com.albamch.studentsservice.client.UserServiceFeignClient;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,10 +16,12 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
 
     private StudentRepository studentRepository;
+    private UserServiceFeignClient userServiceFeignClient;
 
     @Autowired
-    public StudentServiceImpl(StudentRepository studentRepository) {
+    public StudentServiceImpl(StudentRepository studentRepository, UserServiceFeignClient userServiceFeignClient) {
         this.studentRepository = studentRepository;
+        this.userServiceFeignClient = userServiceFeignClient;
     }
 
     @Override
@@ -120,5 +124,12 @@ public class StudentServiceImpl implements StudentService {
 
         log.info("Buscando por cuidad: %S , presencialidad: %S y trasalado: %S", city, presence, move);
         return studentRepository.findByCityIgnoreCaseAndPresenceIgnoreCaseAndMove(city, presence, move);
+    }
+
+    private User registerNewUserName (Student student){
+
+
+
+        return null;
     }
 }

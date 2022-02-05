@@ -88,7 +88,7 @@ public class TagController {
 
     //DELETE
 
-    @RequestMapping(method = RequestMethod.DELETE)
+    /*@RequestMapping(method = RequestMethod.DELETE)
     public  ResponseEntity<Object> delete(@RequestParam("id") Integer id){
 
         HashMap <String, String> response = new HashMap<>();
@@ -103,7 +103,7 @@ public class TagController {
         response.put("No existe usuario con id: ", id.toString());
 
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
-    }
+    }*/
 
     @RequestMapping(method = RequestMethod.DELETE)
     public ResponseEntity<Object> deleteTagByName (@RequestParam("name") String name){

@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
-@ComponentScan({"com.albamch.userservice.mapper","com.albamch.userservice"})
+@ComponentScan({"com.albamch.userservice.mapper","com.albamch.userservice","com.albamch.errors"})
 @EnableJpaRepositories("com.albamch.jpacommons.repository.users")
 @EntityScan("com.albamch.modelcommons.models.users")
 @EnableEurekaClient

@@ -1,11 +1,13 @@
 package com.albamch.userservice.service;
 
-import com.albamch.jpacommons.repository.users.RoleRepository;
+import com.albamch.errors.Exceptions.CustomErrorResponse;
 import com.albamch.modelcommons.models.users.Role;
+import com.albamch.userservice.repository.RoleRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Log4j2
@@ -49,42 +51,54 @@ public class RoleServiceImple implements RoleService{
     public Role enableRole(Integer id) {
 
         log.info("Activando rol: " + id);
-        return roleRepository.setEnableRole(id);
+
+        Role role = findById(id);
+        role.setEnable(true);
+
+        return save(role);
     }
 
     @Override
     public Role disableRole(Integer id) {
 
         log.info("Desactivando rol: " + id);
-        return roleRepository.setDisableRole(id);
+
+        Role role = findById(id);
+        role.setEnable(false);
+
+        return save(role);
     }
 
     @Override
-    public boolean assignUserToRole(Integer userId, String roleName) {
+    @Transactional
+    public void assignUserToRole(Integer userId, String roleName) {
 
         log.info("Asignando rol " + roleName + " a usuario: " + userId);
-        return roleRepository.assignUserToRole(userId, findByName(roleName).get(0).getId());
+        roleRepository.assignUserToRole(userId, findByName(roleName).getId());
     }
 
     @Override
-    public boolean unAssignUserToRole(Integer userId, String roleName) {
+    @Transactional
+    public void unAssignUserToRole(Integer userId, String roleName) {
 
         log.info("Desasignando rol " + roleName + " a usuario: " + userId);
-        return roleRepository.unAssignUserToRole(userId, findByName(roleName).get(0).getId());
+        roleRepository.unAssignUserToRole(userId, findByName(roleName).getId());
     }
 
     @Override
     public Role findById(Integer id) {
 
         log.info("buscando por id: " + id);
-        return roleRepository.findById(id).get();
+        return roleRepository.findById(id).orElseThrow(() -> new CustomErrorResponse(this.getClass(),
+                "No existe registro con el id: " + id,
+                "EntityNotFound"));
     }
 
     @Override
-    public List<Role> findByName(String nombre) {
+    public Role findByName(String nombre) {
 
-        log.info("buscando por nombre: " + nombre);
-        return roleRepository.findByNameContainingIgnoreCase(nombre);
+        log.info("buscando role por nombre: " + nombre);
+        return roleRepository.findByNameIgnoreCase(nombre);
     }
 
     @Override

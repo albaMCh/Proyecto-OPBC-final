@@ -50,7 +50,7 @@ public class UserController {
 
     //POST
 
-    @RequestMapping(value = "/RestorePass", method = RequestMethod.POST)
+    @RequestMapping(value = "/restorePass", method = RequestMethod.POST)
     public ResponseEntity<UserRestoredPassword> restorePassword(@RequestParam(value = "email") String email) {
 
         return new ResponseEntity<>(userService.getPassword(email), HttpStatus.OK);
@@ -68,7 +68,7 @@ public class UserController {
         return new ResponseEntity<>(userService.findByName(nombre), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/SetPass", method = RequestMethod.POST)
+    @RequestMapping(value = "/setPass", method = RequestMethod.POST)
     public ResponseEntity<User> setPassword(@RequestParam(value = "email") String email,
                                             @RequestParam(value = "pass") String pass) {
         return new ResponseEntity<>(userService.setPassword(email, pass), HttpStatus.OK);
