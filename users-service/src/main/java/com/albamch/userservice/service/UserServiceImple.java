@@ -79,7 +79,7 @@ UserServiceImple implements UserService {
         if (!password.equals("")) {
 
             users.setPassword(cryptPasswordEncoder.encode(password));
-            return save(users);
+            return userRepository.save(users);
         }
 
         return null;
